@@ -1,5 +1,8 @@
 import React from "react";
 
+import Img from "../shared/index";
+import Description from "../shared/description";
+
 export default class Planet extends React.Component {
     render(){
         return(
@@ -7,8 +10,9 @@ export default class Planet extends React.Component {
                 <ul>
                     <li>
                         <h4>{this.props.nome}</h4>
-                        <p>{this.props.desc}</p>
-                        <img src={this.props.url} />
+                        <Img img={this.props.url} />
+                        <Description desc={this.props.desc} link={this.props.link} />
+                        
                     </li>
                 </ul>
             </div>
